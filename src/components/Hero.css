@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #f7f7f7; /* Light neutral background */
+  color: #333; /* Default text color */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  ); /* Purple to blue gradient */
+  overflow: hidden; /* Hide content outside container */
+  color: white; /* White text for contrast */
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px; /* Restrict max width */
+  z-index: 1; /* Ensure it's above the animation */
+}
+
+.text-section {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.text-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add depth to the heading */
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.text-section button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #6a11cb; /* Matches gradient */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.text-section button:hover {
+  background-color: #f0f0f0; /* Subtle change */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 80%; /* Prevent it from being too large */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Slight rounding */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Add depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+/* Background Animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  animation: moveBackground 10s infinite;
+  z-index: 0;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(-20%, -20%);
+  }
+  50% {
+    transform: translate(20%, 20%);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stack content */
+    text-align: center;
+  }
+
+  .text-section {
+    padding-right: 0;
+    margin-bottom: 2rem; /* Add space below text */
+  }
+
+  .text-section h1 {
+    font-size: 2.5rem; /* Adjust for smaller screens */
+  }
+
+  .text-section p {
+    font-size: 1rem; /* Smaller font size */
+  }
+
+  .image-section img {
+    max-width: 90%; /* Adjust size */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-section h1 {
+    font-size: 2rem; /* Smaller heading */
+  }
+
+  .text-section p {
+    font-size: 0.9rem; /* Smaller text */
+  }
+
+  .text-section button {
+    padding: 0.7rem 1.2rem; /* Adjust button size */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
