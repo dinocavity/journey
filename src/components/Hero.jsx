@@ -1,5 +1,6 @@
 import './Hero.css';
-import heroImage from '../assets/hero-image.jpg'; // Import image from assets
+import HeroImage from '../assets/hero-image.jpg'; // Import image from assets
+import Button from './Buttons';
 
 const Hero = () => {
     return (
@@ -12,10 +13,10 @@ const Hero = () => {
                     <p>
                         Discover innovative solutions tailored to your needs. Join us today and start achieving your goals.
                     </p>
-                    <button>Get Started</button>
+                    <Button btn='About Me' />
                 </div>
                 <div className="image-section">
-                    <img src={heroImage} alt="Hero Illustration" />
+                    <img src={HeroImage} alt="Hero Illustration" />
                 </div>
             </div>
         </div>
