@@ -1,5 +1,5 @@
 import './Hero.css';
-import HeroImage from '../assets/hero-image.jpg'; // Import image from assets
+import HeroImage from '../assets/Hero-image.jpg'; // Import image from assets
 import Button from './Buttons';
 
 const Hero = () => {
